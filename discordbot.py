@@ -27,11 +27,11 @@ async def on_message(message):
              vcmember2 = cmember[members:]
              vcmember11 = ', '.join(map(str, vcmember1))
              vcmember22 = ', '.join(map(str, vcmember2))
-             msg = discord.Embed(title='チーム分け結果',description="Aチーム：" + str(vcmember11) + "\n" + "Bチーム：" + str(vcmember22) + "です。", colour=0x3498db)
+             msg = discord.Embed(title='チーム分け結果',description="Aチーム：" + str(vcmember11) + "\n" + "Bチーム：" + str(vcmember22), colour=0x3498db)
              await client.send_message(message.channel,embed=msg)
         else:
             await client.send_message(message.channel,"vcに接続している状態で試してみて！！")
             
             
 #''内にトークンを入れれば完成らしい
-client.run('NjE0NjY3Mzg3MjE1Njc1Mzky.XWC0jA.0JowSZh2lZhehMylmJeBOh09nTQ')
+client.run(token)
